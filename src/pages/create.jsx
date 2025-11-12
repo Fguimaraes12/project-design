@@ -28,15 +28,14 @@ function Create() {
       <div className="w-full max-w-4xl mx-auto mt-20">
         {/* Resource Name Section */}
         <div className="mb-8">
-          <h2 className="text-4xl font-semibold mb-2">Resource name</h2>
+          <h2 className="text-4xl font-semibold mb-2">Nome do recurso</h2>
           <p className="text-gray-400 text-sm mb-3">
-            Enter meaningful resource name, it will be used to generate API
-            endpoints.
+            Insira um nome de recurso significativo, ele será usado para gerar endpoints de API.
           </p>
           <input
             type="text"
             placeholder="Example: users, comments, articles..."
-            className="w-full text-gray-300 px-4 py-3 bg-gradient-to-br from-[#2e2e2e] to-[#000000fb] border-2 border-[#383838] rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
+            className="w-full text-gray-300 px-4 py-3 bg-gradient-to-br from-[#2e2e2e] to-[#000000fb] border-2 border-[#383838] rounded-lg focus:outline-none focus:border-white transition-colors"
           />
         </div>
 
@@ -44,7 +43,7 @@ function Create() {
         <div className="mb-8">
           <h2 className="text-4xl font-semibold mb-2">Schema</h2>
           <p className="text-gray-400 text-sm mb-4">
-            Define Resource schema, it will be used to generate mock data.
+            Defina o esquema de Recurso, ele será usado para gerar dados simulados.
           </p>
 
           <div className="space-y-3 mb-4">
@@ -141,17 +140,17 @@ function Create() {
         {/* Object Template Section */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-2">
-            <h2 className="text-4xl font-semibold">Object template</h2>
+            <h2 className="text-4xl font-semibold">Modelo de Objeto</h2>
           </div>
           <p className="text-gray-400 text-sm mb-4">
-            To define more complex structure for your data, use JSON template.
-            You can reference Faker.js function using{" "}
+            Para definir uma estrutura mais complexa para seus dados,
+             use um template JSON. Você pode referenciar a função do Faker.js usando{" "}
             <span className="text-blue-400">$function_name</span>.
           </p>
 
           <div className="relative bg-[#1a1a1a] rounded-lg bg-gradient-to-br from-[#2e2e2e] to-[#000000fb] border-2 border-[#383838] p-4">
             <span className="absolute top-4 right-4 text-xs text-gray-500">
-              EXAMPLE
+              EXEMPLO
             </span>
             <pre className="text-sm font-mono text-gray-300 ">
               <code>{`{
@@ -173,12 +172,12 @@ function Create() {
             <h2 className="text-4xl font-semibold">Endpoints</h2>
           </div>
           <p className="text-gray-400 text-sm mb-4">
-            Enable/disable endpoints and customize response JSON.
+            Ativar/desativar endpoints e personalizar a resposta JSON.
           </p>
           <p className="text-gray-400 text-sm mb-4">
-            By default, Mockapi will return either a list of items or a single
-            item, depending on the request. To define more complex response,
-            provide custom template. You can reference Faker.js methods using{" "}
+           Por padrão, o Mockapi retornará uma lista de itens ou um único item, 
+           dependendo da solicitação. Para definir respostas mais complexas, forneça um modelo
+            personalizado. Você pode fazer referência aos métodos do Faker.js usando{" "}
             <span className="text-blue-400">$function_name</span>.
           </p>
 
@@ -246,7 +245,7 @@ function Create() {
                 $mockData
               </span>
               <span className="text-xs text-gray-500 ml-2">
-                - data stored in DB.
+                - dados armazenados no banco de dados.
               </span>
             </div>
             <div className="mb-4">
@@ -254,7 +253,7 @@ function Create() {
                 $count
               </span>
               <span className="text-xs text-gray-500 ml-2">
-                - number of records stored in DB.
+                - número de registros armazenados no banco de dados.
               </span>
             </div>
 
@@ -262,7 +261,7 @@ function Create() {
               <h3 className="text-sm font-semibold mb-2">$mockData</h3>
               <div className="relative bg-[#0a0a0a] rounded-lg p-4 border border-[#383838] ">
                 <span className="absolute top-3 right-3 text-xs text-gray-600">
-                  EXAMPLE
+                  EXEMPLO
                 </span>
                 <pre className="text-sm font-mono text-gray-300">
                   <code>{`{
@@ -280,7 +279,7 @@ function Create() {
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           <span className="relative text-white text-2xl font-medium tracking-wide">
-            Create
+            Criar
           </span>
         </button>
       </div>

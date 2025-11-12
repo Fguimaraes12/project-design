@@ -14,7 +14,7 @@ function Home() {
 
       <span className="text-[4.6rem] text-white"
       >
-        For devs
+        Para devs
       </span>
 
       <p className="max-w-[40rem] text-gray-300 text-2xl">

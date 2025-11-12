@@ -5,53 +5,53 @@ import Login from "./login";
 
 export default function PricingSection() {
   const { setShowModal} = useContext(LoginContext)
-  const features = [
-    "Account Aggregation",
-    "Expense Tracking",
-    "Budgeting Tools",
-    "Transaction Insights",
-    "Basic Security",
-    "Expense Tracking",
-    "Budgeting Tools",
-    "Transaction Insights",
-    "Basic Security",
-  ];
+const features = [
+    "Agregação de Contas",
+    "Rastreamento de Despesas",
+    "Ferramentas de Orçamento",
+    "Insights de Transações",
+    "Segurança Básica",
+    "Rastreamento de Despesas",
+    "Ferramentas de Orçamento",
+    "Insights de Transações",
+    "Segurança Básica",
+  ];
 
-  const plans = [
-    {
-      title: "Free",
-      price: "$0,00",
-      subtitle: "/month",
-      description: "Great for trying out Finament and for tiny teams.",
-      buttonText: "Start for Free",
-      buttonStyle: "bg-[#232323] hover:bg-[#2e2e2e] text-white",
-      premium: false,
-      business: false,
-      glow: false,
-    },
-    {
-      title: "Premium",
-      price: "$45",
-      subtitle: "/month",
-      description: "Perfect for growing teams that need advanced tools.",
-      buttonText: "Get Started",
-      buttonStyle: "bg-white text-black hover:bg-gray-100",
-      premium: true,
-      business: false,
-      glow: true,
-    },
-    {
-      title: "Business",
-      price: "$99",
-      subtitle: "/month",
-      description: "For established teams needing maximum flexibility.",
-      buttonText: "Get Started",
-      buttonStyle: "bg-[#232323] hover:bg-[#2e2e2e] text-white",
-      premium: false,
-      business: true,
-      glow: false,
-    },
-  ];
+  const planos = [
+    {
+      title: "Grátis",
+      price: "$0,00",
+      subtitle: "/mês",
+      description: "Ótimo para experimentar o Finament e para equipes pequenas.",
+      buttonText: "Começar Gratuitamente",
+      buttonStyle: "bg-[#232323] hover:bg-[#2e2e2e] text-white",
+      premium: false,
+      business: false,
+      glow: false,
+    },
+    {
+      title: "Premium",
+      price: "$45",
+      subtitle: "/mês",
+      description: "Perfeito para equipes em crescimento que precisam de ferramentas avançadas.",
+      buttonText: "Começar",
+      buttonStyle: "bg-white text-black hover:bg-gray-100",
+      premium: true,
+      business: false,
+      glow: true,
+    },
+    {
+      title: "Empresarial",
+      price: "$99",
+      subtitle: "/mês",
+      description: "Para equipes estabelecidas que necessitam de flexibilidade máxima.",
+      buttonText: "Começar",
+      buttonStyle: "bg-[#232323] hover:bg-[#2e2e2e] text-white",
+      premium: false,
+      business: true,
+      glow: false,
+    },
+  ];
 
   return (
     <div
@@ -72,15 +72,15 @@ export default function PricingSection() {
           </p>
         </div>
 
-        {/* Container dos cards */}
+        {/* CONTAINER DOS CARD */}
         <div className="flex flex-wrap justify-center items-center gap-12 ">
-          {plans.map((plan, index) => (
+          {planos.map((plano, index) => (
             <div
               key={index}
               className={`relative w-[390px] h-[640px] rounded-[14px] p-[1px] 
 
       ${
-         plan.premium
+         plano.premium
           ? "bg-[radial-gradient(circle_230px_at_0%_0%,_#ffffff,_#0c0d0d)]"
           : "bg-[radial-gradient(circle_230px_at_0%_0%,_#ffffff,_#0c0d0d)]"
       }
@@ -90,29 +90,28 @@ export default function PricingSection() {
             >
               <div
                 className={`relative flex flex-col justify-start items-start w-full h-full rounded-[12px] border border-[#202222]  ${
-                  plan.premium
+                  plano.premium
                     ? "bg-[radial-gradient(circle_280px_at_0%_0%,_#444444,_#0c0d0d)] "
                     : "bg-[radial-gradient(circle_280px_at_0%_0%,_rgba(40,40,40,0.8),_#0a0a0a)]"
                 } text-white p-8 overflow-hidden`}
               >
-                {/* Linhas e raio de luz só no Premium */}
  
 
-                {/* Conteúdo */}
+                {/* CONTEUDO DENTRO DO CARD */}
                 <div className="relative z-10 flex flex-col items-start text-white">
-                  <h3 className="text-2xl font-bold mb-1">{plan.title}</h3>
-                  <p className="text-4xl font-extrabold mb-1">{plan.price}</p>
+                  <h3 className="text-2xl font-bold mb-1">{plano.title}</h3>
+                  <p className="text-4xl font-extrabold mb-1">{plano.price}</p>
                   <span className="text-base text-gray-400 mb-4">
-                    {plan.subtitle}
+                    {plano.subtitle}
                   </span>
                   <p className="text-base text-gray-400 mb-4">
-                    {plan.description}
+                    {plano.description}
                   </p>
                   <button
                     onClick={() => setShowModal(true)}
-                    className={`w-full transition cursor-pointer rounded-md py-3 text-base font-semibold ${plan.buttonStyle}`}
+                    className={`w-full transition cursor-pointer rounded-md py-3 text-base font-semibold ${plano.buttonStyle}`}
                   >
-                    {plan.buttonText}
+                    {plano.buttonText}
                   </button>
                   <div className="mt-8 w-full">
                     <h4 className="text-sm tracking-widest text-gray-500 mb-2 flex items-center gap-2">
@@ -121,12 +120,12 @@ export default function PricingSection() {
                       <span className="flex-1 border-t border-[#333]" />
                     </h4>
                     <ul className="space-y-2">
-                      {features.map((f, i) => (
+                      {features.map((feature, index) => (
                         <li
-                          key={i}
+                          key={index}
                           className="flex items-center gap-2 text-base text-gray-300"
                         >
-                          <Check className="w-5 h-5 text-green-400" /> {f}
+                          <Check className="w-5 h-5 text-green-400" /> {feature}
                         </li>
                       ))}
                     </ul>
