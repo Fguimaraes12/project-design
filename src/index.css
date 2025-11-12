@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'ClashGrotesk-Medium';
+  background-color: black;
+  background-image: 
+  url('./assets/img/sombra-projetada.png'),
+  url('./assets/img/background-img.svg');
+  background-position: center 130%, center bottom;
+  background-repeat: no-repeat;
+  background-size: 150vh, 145vh;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+
+
+
+
+@font-face {
+  font-family: 'ClashGrotesk-Medium';
+  src: url('./assets/fonts/ClashGrotesk-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 100px;
+}
+
+@font-face {
+  font-family: 'ClashGrotesk-Light';
+  src: url('./assets/fonts/ClashGrotesk-extraLight.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 100px;
+}
+
+
+
+
+
