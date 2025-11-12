@@ -18,9 +18,8 @@ function Home() {
       </span>
 
       <p className="max-w-[40rem] text-gray-300 text-2xl">
-        Say goodbye to Lorem Ipsum! DummyJSON brings real JSON data to your
-        frontend, letting you focus on development while we take care of data
-        serving.
+     Diga adeus ao Lorem Ipsum! O DummyJSON traz dados JSON reais para o seu frontend,
+     permitindo que você se concentre no desenvolvimento enquanto cuidamos dos dados.
       </p>
 
     <div className="flex gap-6 mt-8">
@@ -29,7 +28,7 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         <Link to="/pricing" className="relative text-white text-2xl font-medium tracking-wide">
-          Get started
+          Começar Agora
         </Link>
       </button>
 
@@ -38,7 +37,7 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-300 via-purple-200 to-gray-400"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
         <span className="relative text-gray-900 text-2xl font-medium tracking-wide">
-          Create API
+          Criar API
         </span>
       </Link>
     </div>

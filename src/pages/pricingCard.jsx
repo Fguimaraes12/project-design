@@ -1,6 +1,10 @@
 import { Check } from "lucide-react";
+import { useContext } from "react";
+import { LoginContext } from "../context/loginContext";
+import Login from "./login";
 
 export default function PricingSection() {
+  const { setShowModal} = useContext(LoginContext)
   const features = [
     "Account Aggregation",
     "Expense Tracking",
@@ -58,12 +62,13 @@ export default function PricingSection() {
         backgroundPosition: "center 300px",
       }}
     >
+      <Login/>
       <div className="flex flex-col items-center justify-center min-h-screen text-white px-4">
         {/* Cabeçalho */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-3">Our Plans Scale</h2>
+          <h2 className="text-4xl font-bold mb-3">Nossos Planos Crescem</h2>
           <p className="text-gray-400 text-lg">
-            Great plans for every stage of your business.
+            Grandes planos para cada etapa do seu negócio.
           </p>
         </div>
 
@@ -104,11 +109,11 @@ export default function PricingSection() {
                     {plan.description}
                   </p>
                   <button
-                    className={`w-full transition rounded-md py-3 text-base font-semibold ${plan.buttonStyle}`}
+                    onClick={() => setShowModal(true)}
+                    className={`w-full transition cursor-pointer rounded-md py-3 text-base font-semibold ${plan.buttonStyle}`}
                   >
                     {plan.buttonText}
                   </button>
-
                   <div className="mt-8 w-full">
                     <h4 className="text-sm tracking-widest text-gray-500 mb-2 flex items-center gap-2">
                       <span className="flex-1 border-t border-[#333]" />
