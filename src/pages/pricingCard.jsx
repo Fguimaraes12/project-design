@@ -1,10 +1,8 @@
 import { Check } from "lucide-react";
-import { useContext } from "react";
-import { LoginContext } from "../context/loginContext";
 import Login from "./login";
+import { Link } from "react-router-dom";
 
 export default function PricingSection() {
-  const { setShowModal} = useContext(LoginContext)
 const features = [
     "Agregação de Contas",
     "Rastreamento de Despesas",
@@ -65,8 +63,8 @@ const features = [
       <Login/>
       <div className="flex flex-col items-center justify-center min-h-screen text-white px-4">
         {/* Cabeçalho */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-3">Nossos Planos Crescem</h2>
+        <div className="text-center mb-12 my-30">
+          <h2 className="text-5xl font-bold mb-3">Nossos Planos Crescem</h2>
           <p className="text-gray-400 text-lg">
             Grandes planos para cada etapa do seu negócio.
           </p>
@@ -107,12 +105,12 @@ const features = [
                   <p className="text-base text-gray-400 mb-4">
                     {plano.description}
                   </p>
-                  <button
-                    onClick={() => setShowModal(true)}
-                    className={`w-full transition cursor-pointer rounded-md py-3 text-base font-semibold ${plano.buttonStyle}`}
+                  <Link
+                    to={"/checkout"}
+                    className={`w-full flex justify-center transition cursor-pointer rounded-md py-3 text-base font-semibold ${plano.buttonStyle}`}
                   >
                     {plano.buttonText}
-                  </button>
+                  </Link>
                   <div className="mt-8 w-full">
                     <h4 className="text-sm tracking-widest text-gray-500 mb-2 flex items-center gap-2">
                       <span className="flex-1 border-t border-[#333]" />

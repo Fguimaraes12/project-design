@@ -25,7 +25,7 @@ function Create() {
         backgroundPosition: "center 300px",
       }}
     >
-      <div className="w-full max-w-4xl mx-auto mt-20">
+      <div className="w-full max-w-4xl mx-auto mt-20 py-15">
         {/* Resource Name Section */}
         <div className="mb-8">
           <h2 className="text-4xl font-semibold mb-2">Nome do recurso</h2>

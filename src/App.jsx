@@ -5,6 +5,8 @@ import Catalog from "./pages/catalog"
 import PricingCard from "./pages/pricingCard"
 
 import { Routes, Route } from "react-router-dom"
+import Pagamento from "./pages/pagamento"
+import AdminDashboard from "./pages/adminDashboard"
 
 function App() {
 
@@ -17,6 +19,8 @@ function App() {
       <Route path="/create" element={<Create/>}/>
       <Route path="/catalog" element={<Catalog/>}/>
       <Route path="/pricing" element={<PricingCard/>}/>
+      <Route path="/checkout" element={<Pagamento/>}/>
+      <Route path="/admin" element={<AdminDashboard/>}/>
     </Routes>
 
 
